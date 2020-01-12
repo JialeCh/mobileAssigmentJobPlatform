@@ -40,7 +40,7 @@ class UserProfile : Fragment() {
         }
         btnSignOut.setOnClickListener(){
             mAuth.signOut()
-            LogIn.getActivity()
+
         }
     }
 

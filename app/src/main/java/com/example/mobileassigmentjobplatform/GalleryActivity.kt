@@ -77,7 +77,7 @@ class GalleryActivity : AppCompatActivity() {
     }
     private fun uploadImage(){
         if(filePath != null){
-            val ref = storageReference?.child("uploads/" + UUID.randomUUID().toString())
+            val ref = storageReference?.child("ProfileUser/" + UUID.randomUUID().toString())
             val uploadTask = ref?.putFile(filePath!!)
 
             val urlTask = uploadTask?.continueWithTask(Continuation<UploadTask.TaskSnapshot, Task<Uri>> { task ->
