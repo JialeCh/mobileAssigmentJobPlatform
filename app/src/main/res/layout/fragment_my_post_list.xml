@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    tools:context=".Mypost.MyPost">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back_ground">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleV_postListing"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/recycle"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addNewPost"
+            style="@drawable/rounded_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="52dp"
+            android:background="@color/dark_blue"
+            android:clickable="true"
+            android:tint="@color/colorAccent"
+            app:backgroundTint="#17202A"
+            app:backgroundTintMode="src_in"
+            app:fabSize="auto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:maxImageSize="45dp"
+            app:rippleColor="@color/grey"
+            app:srcCompat="@drawable/ic_control_point_black_24dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

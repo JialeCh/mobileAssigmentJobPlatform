@@ -4,17 +4,22 @@
 
     <item
         android:id="@+id/userProfile"
+        android:icon="@drawable/ic_person_black_24dp"
         android:title="Profile" />
     <item
-        android:id="@+id/postListing"
-        android:title="Find Job" />
+        android:id="@+id/searchFragment"
+        android:icon="@android:drawable/ic_search_category_default"
+        android:title="Search" />
     <item
-        android:id="@+id/homeFragment"
-        android:title="Home" />
+        android:id="@+id/postListing"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Find Your Job" />
     <item
         android:id="@+id/myApply"
+        android:icon="@drawable/ic_dashboard_black_24dp"
         android:title="My Apply" />
     <item
         android:id="@+id/myPost"
+        android:icon="@drawable/ic_format_list_numbered_black_24dp"
         android:title="My Post" />
 </menu>

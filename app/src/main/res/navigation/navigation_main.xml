@@ -3,32 +3,147 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_main"
-    android:label="home"
-    app:startDestination="@id/homeFragment">
+    android:label="search"
+    app:startDestination="@+id/postListing">
 
     <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.example.mobileassigmentjobplatform.home.HomeFragment"
-        android:label="home"
-        tools:layout="@layout/fragment_home_fragment" />
+        android:id="@+id/searchFragment"
+
+        android:name="com.example.mobileassigmentjobplatform.Search.searchFragment"
+        android:label="search"
+        tools:layout="@layout/fragment_searchpage" >
+        <action
+            android:id="@+id/action_searchFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/myApply"
         android:name="com.example.mobileassigmentjobplatform.Myapply.MyApply"
         android:label="myApply"
-        tools:layout="@layout/fragment_my_apply" />
+        tools:layout="@layout/fragment_my_apply">
+        <action
+            android:id="@+id/action_myApply_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/postListing"
         android:name="com.example.mobileassigmentjobplatform.postlisting.PostListing"
         android:label="job post"
-        tools:layout="@layout/fragment_post_listing" />
+        tools:layout="@layout/fragment_post_listing">
+        <action
+            android:id="@+id/action_postListing_to_detailFragment"
+            app:destination="@+id/detailFragment" />
+        <action
+            android:id="@+id/action_postListing_to_editProfile"
+            app:destination="@id/editProfile" />
+    </fragment>
     <fragment
         android:id="@+id/myPost"
         android:name="com.example.mobileassigmentjobplatform.Mypost.MyPost"
         android:label="my post"
-        tools:layout="@layout/fragment_my_post" />
+        tools:layout="@layout/fragment_my_post" >
+        <action
+            android:id="@+id/action_myPost_to_myPostRecycleVeiw"
+            app:destination="@id/myPostRecycleVeiw" />
+    </fragment>
     <fragment
         android:id="@+id/userProfile"
         android:name="com.example.mobileassigmentjobplatform.userProfile.UserProfile"
         android:label="user Profile"
-        tools:layout="@layout/fragment_user_profile" />
+        tools:layout="@layout/fragment_user_profile" >
+        <action
+            android:id="@+id/action_userProfile_to_editProfile"
+            app:destination="@id/editProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.mobileassigmentjobplatform.postlisting.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="title_name"
+            app:argType="string" />
+        <argument
+            android:name="salary"
+            app:argType="string" />
+        <argument
+            android:name="image"
+            app:argType="string" />
+        <argument android:name="date" />
+        <argument android:name="inform" />
+        <argument
+            android:name="location"
+            app:argType="string" />
+        <argument
+            android:name="companyName"
+            app:argType="string" />
+        <argument android:name="jobPostID" />
+        <argument android:name="AuthorID" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/myPostRecycleVeiw"
+        android:name="com.example.mobileassigmentjobplatform.Mypost.MyPostRecycleVeiw"
+        android:label="fragment_my_post_recycle_veiw"
+        tools:layout="@layout/fragment_my_post_recycle_veiw" >
+    <argument
+        android:name="title_name"
+        app:argType="string" />
+    <argument
+        android:name="salary"
+        app:argType="string" />
+    <argument
+        android:name="image"
+        app:argType="string" />
+    <argument android:name="date" />
+    <argument android:name="inform" />
+    <argument
+        android:name="location"
+        app:argType="string" />
+    <argument
+        android:name="companyName"
+        app:argType="string" />
+    <argument android:name="jobPostID" />
+    <argument android:name="AuthorID" />
+        <action
+            android:id="@+id/action_myPostRecycleVeiw_to_editPost"
+            app:destination="@id/editPost" />
+    </fragment>
+    <fragment
+        android:id="@+id/editPost"
+        android:name="com.example.mobileassigmentjobplatform.Mypost.EditPost"
+        android:label="fragment_edit_post"
+        tools:layout="@layout/fragment_edit_post" >
+    <argument
+        android:name="title_name"
+        app:argType="string" />
+    <argument
+        android:name="salary"
+        app:argType="string" />
+    <argument
+        android:name="image"
+        app:argType="string" />
+    <argument android:name="date" />
+    <argument android:name="inform" />
+    <argument
+        android:name="location"
+        app:argType="string" />
+    <argument
+        android:name="companyName"
+        app:argType="string" />
+    <argument android:name="jobPostID" />
+    <argument android:name="AuthorID" />
+        <action
+            android:id="@+id/action_editPost_to_myPostRecycleVeiw"
+            app:destination="@id/myPostRecycleVeiw" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfile"
+        android:name="com.example.mobileassigmentjobplatform.userProfile.EditProfile"
+        android:label="activity_edit_profile"
+        tools:layout="@layout/activity_edit_profile" >
+        <action
+            android:id="@+id/action_editProfile_to_userProfile"
+            app:destination="@id/userProfile" />
+    </fragment>
 </navigation>

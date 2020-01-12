@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".postlisting.PostListing">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="698dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleV_searchListing"
+            android:layout_width="414dp"
+            android:layout_height="713dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <EditText
+            android:id="@+id/search_EditText"
+            android:layout_width="333dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="4dp"
+            android:ems="10"
+            android:hint="Search...."
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@id/recycleV_searchListing"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.132" />
+
+        <ImageButton
+            android:id="@+id/btnSearch"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:drawable/screen_background_light_transparent"
+            android:src="@android:drawable/ic_search_category_default"
+            app:layout_constraintBottom_toTopOf="@id/recycleV_searchListing"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/search_EditText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.158" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

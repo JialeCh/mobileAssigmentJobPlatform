@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_ground"
+    tools:context=".Register">
+
+
+    <EditText
+        android:id="@+id/passwordTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailTxt"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/rounded_button"
+        android:hint="Password..."
+        android:inputType="textPassword"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/emailTxt"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="205dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/rounded_button"
+        android:hint="Email..."
+        android:inputType="textEmailAddress"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/sign_in_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/btnNext"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="75dp"
+        android:layout_marginBottom="168dp"
+        android:clickable="true"
+        android:linksClickable="false"
+        android:text="Have a account already ? Sign In heree"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textColorLink="@color/colorAccent"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pass_login"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="358dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/rounded_btn2"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+
+        />
+
+
+
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/navigation_main" />
+
+
+</RelativeLayout>

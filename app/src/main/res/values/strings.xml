@@ -3,4 +3,16 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!--    firebase data job post-->
+    <string name="jPitle_Fb">JPtitle</string>
+    <string name="jPDate_Fb">JPDate</string>
+    <string name="jPImage_Fb">JPImage</string>
+    <string name="jPSalary_Fb">JPSalary</string>
+    <string name="jPcompanyName_Fb">JPcompanyName</string>
+    <string name="jPinform_Fb">JPinform</string>
+    <string name="locatione_Fb">location</string>
+    <string name="userID_Fb">userID</string>
+    <!--    firebase data job post-->
 </resources>
