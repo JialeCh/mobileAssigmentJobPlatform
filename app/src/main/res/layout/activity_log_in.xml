@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_ground"
+    tools:context=".LogIn">
+
+
+    <TextView
+        android:id="@+id/Forgot_Password"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/btnLogIn"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:linksClickable="false"
+        android:text="Forgot Password ?"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textColorLink="@color/colorAccent"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="160dp"
+        android:layout_height="90dp"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp" />
+
+    <EditText
+        android:id="@+id/email_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="94dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/rounded_button"
+        android:hint="Email..."
+        android:inputType="textEmailAddress"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/pass_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/email_login"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/rounded_button"
+        android:hint="Password..."
+        android:inputType="textPassword"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/btnLogIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pass_login"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/rounded_btn2"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+
+        />
+
+
+
+    <TextView
+        android:id="@+id/sign_up_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/btnLogIn"
+        android:layout_marginTop="91dp"
+        android:clickable="true"
+        android:linksClickable="false"
+        android:text="Haven't have an account? Sign Up Here"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textColorLink="@color/colorAccent"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/navigation_main" />
+
+</RelativeLayout>
